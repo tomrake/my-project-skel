@@ -1,0 +1,23 @@
+#+TITLE: Issues of Security
+#+DATE: 2024-08-20
+
+* How I handle security
+
+There was a recent news blurb about credentials being available by github actions.
+My analysis was that I only used github actions to update my hugo blogs.
+
+I used a security tools to analyze my github repos and found that I used actions on four repos with this one being the main contender.
+
+** Possible credential stealling
+
+This is leaking of secrets to logs or artifacts that can be used by others.
+
+The only secret I have used is the GITHUB_TOKEN and it is not exposed in the logs or the artifacts.
+A credential monitoring system ensure the GITHUB_TOKEN is not added to the logs or the github-pages artifact.
+
+Essential parts of the github action process was also inspected and recomended using "pinned" version of external actions.
+This prevents contaminated components changes to be introduced.
+A version monitoring system allow the monitoring of update of components which may include bug fixes.
+
+I need to make a few changes to my yugo.xml script as updated components required a few changes.
+This allow me to review what I had done and understand the scripts which were largely cut an pasted.
