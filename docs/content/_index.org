@@ -1,0 +1,7 @@
+#+TITLE: Site Welcome
+#+DESCRIPTION: "Welcome the Project Skel site!"
+#+LAYOUT: "home"
+The Welcome page, the site index.html page.
+
+The content for this page is from content/_index.org which also includes metadata.
+I am using the "home" layout which I hope is provided by the theme.
